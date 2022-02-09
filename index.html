@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Arrangement</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body>
+
+    <div class="grid-wrapper">
+  
+        <div id="bas1" class="element1 element1--bass">Bass</div>
+        <div id="bas2" class="element1  element1--bass">Bass</div>
+        <div class="element1 element1--vocal">Beat</div>
+        <div class="element1 element1--melodic">Top</div>
+        <div class="element1 element1--melodic">Synth</div>
+        <div id="fxdiv" class="element1 element1--perc">FX</div>
+        <div id="stopb" class="close-bass">Stop Bass</div>
+      </div>
+           
+      <audio data-key="65" src="./melodii/170_CannedBeat_02_516.wav"></audio>
+      <audio data-key="83" src="./melodii/170_D_KillerSynth_01_516.wav"></audio>
+      <audio id="audiob2" data-key="68" src="./melodii/170_G_CoderBass_01_516.wav"></audio>
+      <audio data-key="68" src="./melodii/170_KnockTop_01_516.wav"></audio>
+      <audio id="fx" data-key="68" src="./melodii/fxsound.wav"></audio>
+      <audio id="audiob1" data-key="68" src="./melodii/bass.wav"></audio>
+     
+          
+      <script src="index.js"></script>
+</body>
+</html>
