@@ -1,64 +1,119 @@
-*,*::after,*::before{box-sizing:border-box;}
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
 
-body{display:grid;height:100vh;place-content:center;}
+body {
+    display: grid;
+    height: 100vh;
+    place-content: center;
+    background-color:#aa9bb4;
+}
 .grid-wrapper {
-  display: grid;
-  gap:30px;
-  width:max-content;
-  grid-template-columns: 1fr 1fr ;
-  grid-template-rows: 1fr 1fr ;
-  background-color:#0984e3;
-  padding:1em;
-  position:relative;
+    display: grid;
+    gap: 35px;
+    width: max-content;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    background-color: #494242;
+    padding: 1em;
+    position: relative;
 }
 .element1 {
-  
-  background-color: #F6EBEB;
-  width: 120px;
-  height: 120px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius:5px 5px 5px 5px;
-  font-size:1.2rem;
-  font-weight:bold;
-  cursor:pointer;
-  will-change:background-color;
-  transition: background .125s ease-out;
+    position:relative;
+    background-color: #F6EBEB;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px 5px 5px 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    will-change: background-color;
+    transition: background 0.125s ease-out;
+    overflow: hidden;
 }
-.element1--bass{grid-column:1/2;grid-row:1/1;}
-.element1--salut{grid-column:2/3;grid-row:1/1;}
-.element1--vocal{position:absolute;inset:40%;}
-.element1--melodic{grid-row:2/3;grid-column:1/2;}
-.element1--synth{grid-row:2/3;grid-column:2/3;}
+.animatie::after{content:'';
+  position: absolute;
+  
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height:5px;
+  transform:translateX(-100%);
+  background-color: #fc2f70;
+animation:vrum 1s linear infinite;}
 
-.close-bass{position:relative;
+@keyframes vrum {
+    
+    to {
+        transform:translateX(100%);
+        }
+}
+
+.element1--bass {
+    grid-column: 1 / 2;
+    grid-row: 1 / 1;
+}
+.element1--salut {
+    grid-column: 2 / 3;
+    grid-row: 1 / 1;
+}
+.element1--strings {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.element1--melodic {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+}
+.element1--synth {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+}
+
+.close-bass {
+    position: relative;
     background-color: #cf2a2a;
-    color:white;
-      width: 120px;
-      height: 80px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius:5px 5px 5px 5px;
-      font-size:1.2rem;
-      font-weight:bold;
-      cursor:pointer;}
+    color: white;
+    width: 120px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px 5px 5px 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+}
 
 
-.close-bass:hover{background-color:#b42525;}
-
-.element1--bass:hover{background-color:#8c7ae6!important;}
-.element1--vocal:hover{background-color:#44bd32!important;}
-.element1--melodic:hover{background-color:#192a56!important;}
-.element1--synth:hover{background-color:#6D214F!important;}
-.element1--salut:hover{background-color:#FEA47F!important;}
+.close-bass:hover {
+    background-color: #b42525;
+}
+.element1:hover{box-shadow: inset 0 0 11px rgb(94, 85, 85);}
 
 
+.element1:nth-child(2) {
+    border-radius: 5px 5px 0 30px;
+}
+.element1:nth-child(1) {
+    border-radius: 5px 5px 30px 5px;
+}
+.element1:nth-child(4) {
+    border-radius: 5px 30px 5px 5px;
+}
+.element1:nth-child(5) {
+    border-radius: 30px 0 5px 5px;
+}
+.element1:nth-child(3) {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
 
-.element1:nth-child(2){border-radius: 5px 5px 0 30px;}
-.element1:nth-child(1){border-radius: 5px 5px 30px 5px;}
-.element1:nth-child(4){border-radius: 5px 30px 5px 5px;}
-.element1:nth-child(5){border-radius: 30px 0 5px 5px;}
-.element1:nth-child(3){border-radius: 50%;width:60px;height:60px;}
-.element1:nth-child(6){border-radius: 30px 0 5px 5px;}
