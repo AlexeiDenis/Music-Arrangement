@@ -139,6 +139,7 @@ function PlayKeyboard(e) {
   x.currentTime = 0;
   if (x.paused) {
     x.play();
+    x.loop= false;
     switch (z) {
       case 81:
         y.style.backgroundColor = "#8c7ae6";
