@@ -1,47 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Music Arrangement</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
-  </head>
-  <body>
-    <div id="wrapper" class="grid-wrapper">
-      <div id="bas1" data-key="81" class="element1 element1--bass"></div>
-      <div id="bas2" data-key="87" class="element1 element1--salut"></div>
-      <div id="strings" data-key="69" class="element1 element1--strings"></div>
-      <div id="choir" data-key="65" class="element1 element1--melodic"></div>
-      <div id="synth" data-key="83" class="element1 element1--synth"></div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Music Arrangement</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+  <div class="instructions">
+    <h1>Instructions</h1>
+    <ul>
+      <li>
+        <p>For infinite loop click on the buttons.</p>
+      </li>
+      <li>
+        <p>To run them one time press <kbd>Q</kbd>, <kbd>W</kbd>, <kbd>E</kbd>, <kbd>A</kbd>, <kbd>S</kbd>.</p>
+      </li>
+    </ul>
+
+
+  </div>
+  <div id="wrapper" class="grid-wrapper">
+    <div id="bas1" data-key="81" class="element1 element1--bass">
+      <p class="keyboards">Q</p>
     </div>
+    <div id="bas2" data-key="87" class="element1 element1--salut">
+      <p class="keyboards">W</p>
+    </div>
+    <div id="strings" data-key="69" class="element1 element1--strings">
+      <p class="keyboards">E</p>
+    </div>
+    <div id="choir" data-key="65" class="element1 element1--melodic">
+      <p class="keyboards">A</p>
+    </div>
+    <div id="synth" data-key="83" class="element1 element1--synth">
+      <p class="keyboards">S</p>
+    </div>
+  </div>
 
-    <audio
-      id="audstring"
-      data-key="69"
-      src="./melodii/looperman-l-2986535-0249500-megalovania-epic-version-stems-i-strings.wav"
-    ></audio>
-    <audio
-      id="audsynth"
-      data-key="83"
-      src="./melodii/looperman-l-2986535-0249501-megalovania-epic-version-stems-i-synth-bass.wav"
-    ></audio>
-    <audio
-      id="audiob1"
-      data-key="87"
-      src="./melodii/looperman-l-2986535-0249502-megalovania-epic-version-stems-i-drums.wav"
-    ></audio>
-    <audio
-      id="audchoir"
-      data-key="65"
-      src="./melodii/looperman-l-2986535-0249503-megalovania-epic-version-stems-i-choir.wav"
-    ></audio>
-    <audio
-      id="audiob2"
-      data-key="81"
-      src="./melodii/looperman-l-2986535-0249504-megalovania-epic-version-stems-i-brass.wav"
-    ></audio>
+  <audio id="audstring" data-key="69"
+    src="./melodii/looperman-l-2986535-0249500-megalovania-epic-version-stems-i-strings.wav"></audio>
+  <audio id="audsynth" data-key="83"
+    src="./melodii/looperman-l-2986535-0249501-megalovania-epic-version-stems-i-synth-bass.wav"></audio>
+  <audio id="audiob1" data-key="87"
+    src="./melodii/looperman-l-2986535-0249502-megalovania-epic-version-stems-i-drums.wav"></audio>
+  <audio id="audchoir" data-key="65"
+    src="./melodii/looperman-l-2986535-0249503-megalovania-epic-version-stems-i-choir.wav"></audio>
+  <audio id="audiob2" data-key="81"
+    src="./melodii/looperman-l-2986535-0249504-megalovania-epic-version-stems-i-brass.wav"></audio>
 
-    <script src="index.js"></script>
-  </body>
+  <script src="index.js"></script>
+</body>
+
 </html>

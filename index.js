@@ -3,6 +3,8 @@ const divbass2 = document.getElementById("bas2");
 const s = document.getElementById("strings");
 const synth = document.getElementById("synth");
 const ch = document.getElementById("choir");
+const paragraphs = document.querySelectorAll('.keyboards');
+
 
 function PlayChoir() {
   const x = document.getElementById("audchoir");
@@ -135,6 +137,7 @@ function PlayKeyboard(e) {
   const x = document.querySelector(`audio[data-key="${e.keyCode}"]`);
   const y = document.querySelector(`.element1[data-key="${e.keyCode}"]`);
   let z = e.keyCode;
+  if(z){paragraphs.forEach((b)=>{b.style.visibility= "visible";})}
   if (!x) return;
   x.currentTime = 0;
   if (x.paused) {

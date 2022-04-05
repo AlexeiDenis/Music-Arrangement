@@ -8,8 +8,38 @@ body {
   display: grid;
   height: 100vh;
   place-content: center;
-  background-color: #aa9bb4;
+  background-color: #293241;
 }
+kbd {
+  color: #19180a;
+  background: linear-gradient(to right, #f2fdff, #eff7f6);
+  padding: 0.05em 0.35em;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.instructions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6em;
+  margin-bottom: 1em;
+  place-self: start;
+}
+
+.instructions p {
+  margin: 0;
+  color: #f7eeeb;
+  font-size: 13pt;
+}
+
+h1 {
+  margin: 0;
+  width: max-content;
+  border-bottom: 2px solid #f2fdff;
+  color: #ee6c4d;
+}
+
 .grid-wrapper {
   display: grid;
   gap: 35px;
@@ -19,7 +49,15 @@ body {
   background-color: #494242;
   padding: 1em;
   position: relative;
-  border-radius:12px;
+  border-radius: 12px;
+}
+.grid-wrapper div {
+  color: rgba(0, 0, 0, 0.1);
+  font-size: 3.25rem;
+}
+
+.grid-wrapper p{
+  visibility:hidden;
 }
 .element1 {
   position: relative;
